@@ -1,3 +1,12 @@
 <!-- in views/play.erb -->
 <h1><%= @player_1_name %> vs. <%= @player_2_name %></h1>
-<%=@player_2_name%>: 60HP
+<h2><%= @player_2_name %>: 60HP</h2>
+
+
+<div style="float:left">
+<h3><%= @player_1_name %></h3>
+
+<form action="/attack" method="get">
+  <input type="submit" value="Attack">
+</form>
+</div>
