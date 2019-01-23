@@ -8,8 +8,7 @@ describe Player do
     expect(player_1.name).to eq 'Cat'
   end
 
-  it 'can attack a target' do
-    expect{player_1.attack(player_2)}.to change{player_2.hit_points}.by(-10)
+  it 'receives damage' do
+    expect{player_1.receives_damage}.to change{player_1.hit_points}.by(-10)
   end
-
 end
