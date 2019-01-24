@@ -9,6 +9,13 @@ describe Player do
   end
 
   it 'receives damage' do
-    expect{player_1.receives_damage}.to change{player_1.hit_points}.by(-10)
+    srand(6)
+    expect{player_1.receives_damage}.to change{player_1.hit_points}.by(-11)
+  end
+
+  it 'generates random amount of damage' do
+    srand(6)
+    expect(player_1.random_damage).to eq 11
+    expect(player_1.random_damage).to eq 74
   end
 end

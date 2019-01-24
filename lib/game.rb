@@ -5,7 +5,7 @@ class Game
   end
 
   def self.instance
-    @game 
+    @game
   end
 
   attr_reader :player_1, :player_2, :turn, :opponent
@@ -32,7 +32,7 @@ class Game
   end
 
   def game_over?
-    @opponent.hit_points == 0
+    @opponent.hit_points <= 0 
   end
 
 end

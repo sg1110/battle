@@ -102,7 +102,7 @@ end
 # add this to spec/spec_helper.rb
 
 ENV['RACK_ENV'] = 'test'
-
+#for switching between databasses when testing programms in rspec or not
 # require our Sinatra app file
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
 
