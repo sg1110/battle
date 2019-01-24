@@ -23,4 +23,8 @@ class Game
     end
   end
 
+  def game_over?
+    @opponent.hit_points == 0
+  end
+
 end
