@@ -1,4 +1,4 @@
-<h1><%= @game.player_1.name %> attacked <%= @game.player_2.name %> succesfully</h1>
-<form action="/play" method="get">
+<h1><%= @game.turn.name %> attacked <%= @game.opponent.name %> succesfully</h1>
+<form action="/switch_turn" method="post">
   <input type="submit" value="Ok">
 </form>

@@ -18,4 +18,12 @@ describe Game do
     expect(game.player_2).to eq dog
   end
 
+  it "Game starts with players 1 turn" do
+    expect(game.turn).to eq cat
+  end
+
+  it "Switches players turns" do
+    game.switch_turn
+    expect(game.turn).to eq dog
+  end
 end
