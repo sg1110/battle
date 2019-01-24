@@ -1,10 +1,14 @@
 <!-- in views/play.erb -->
 <h1><%= @game.player_1.name %> vs. <%= @game.player_2.name %></h1>
-<h2><%= @game.player_2.name %>: <%=@game.player_2.hit_points%>HP</h2>
+
+<h2><%= @game.turn.name %>: <%=@game.turn.hit_points%>HP</h2>
+
+
+<h2><%= @game.opponent.name %>: <%=@game.opponent.hit_points%>HP</h2>
 
 
 <div style="float:left">
-<h3><%= @game.player_1.name %></h3>
+<h3><%= @game.turn.name %></h3>
 
 <form action="/attack" method="get">
   <input type="submit" value="Attack">
